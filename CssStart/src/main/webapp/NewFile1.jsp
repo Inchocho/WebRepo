@@ -9,23 +9,7 @@
 		<title>Insert title here</title>
 	</head>
 	
-<!-- 	하위 선택자 -->
-	
 	<body>
-	
-		<ul class='boxUL'>
-			<li>
-				<a href='#'>101</a>
-			</li>
-			
-			<li>
-				<a href='#'>102</a>
-			</li>
-			
-			<li>
-				<a href='#'>103</a>
-			</li>
-		</ul>
 	
 	</body>
 </html>
