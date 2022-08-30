@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>웹 문서구조2</title>
+		<title>웹 문서구조2(alert추가)</title>
 		
 		<style type="text/css">
 			.ulSecondLi{
@@ -26,7 +26,7 @@
 				<li class="remoteSelLi">
 					getElementById
 				</li>
-				<li>
+				<li class="ulSecondLi">
 					getElementsByTagnName
 				</li>
 			</ul>
@@ -35,7 +35,7 @@
 				<li class='myGroup'>
 					parentNode
 				</li>
-				<li>
+				<li class='ulSecondLi'>
 					childNodes
 				</li>
 				<li>children</li>
@@ -62,31 +62,27 @@
 	
 	<script type="text/javascript">
 		
-		var myDivObj = document.getElementById('rootTagDiv');
-		var myH2ObjList = myDivObj.getElementsByTagName('h2');
+		var rootDivObj = document.getElementById('rootTagDiv');
 		
-		myH2ObjList[0].style.backgroundColor='#00FF40';
-		myH2ObjList[1].style.backgroundColor='#DF01D7';
+		var ulObjList = rootDivObj.getElementsByTagName('ul');
 		
-		var myUlObjList = myDivObj.getElementsByTagName('ul');
-		var ulChildObj = myUlObjList[0].getElementsByTagName('li');
+// 		경고창
+// 		alert(ulObjList);
+// 		alert(ulObjList[0]);
 		
-		for (var i = 0; i < ulChildObj.length; i++) {
-			ulChildObj[i].style.fontSize = (10*(i+1))+'px';
+		var liObjList = ulObjList[1].getElementsByTagName('li');
+		
+// 		alert(liObjList);
+
+//		클래스명을 html태그에 직접 넣는게 아니라 객체지향적으로 집어넣자
+//		className을 통해 해당 인덱스에 클래스명을 지정해줌
+//		아래처럼 반복문을 이용해서 2번째ul에 li에 클래스명 ulSecondLi를 넣어줌
+		
+		for (var i = 0; i < liObjList.length; i++) {
+			liObjList[i].className = 'ulSecondLi';
 		}
 		
-// 		var myFirstLiObj =  ulChildObj[0];
-// 		var mySecondLiObj = ulChildObj[1];
-				
-// 		myFirstLiObj.style.fontSize = '10px';
-// 		mySecondLiObj.style.fontSize = '20px';
-		
-		var ulSecondChildObj = myUlObjList[1].getElementsByTagName('li');
-		
-		for (var i = 0; i < ulSecondChildObj.length; i++) {
-			ulSecondChildObj[i].style.border = '1px solid black';	
-		}
-		
+		alert(liObjList[0].className);
 		
 	</script>	
 	
