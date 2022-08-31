@@ -19,24 +19,21 @@
 			var gugu = '';   	//구구단 담을 변수
 			var divTableGugu = '';  //div table 구구단을 담을 변수
 			
-			inputGu = 2;
-								
-// 			for (var i = 1; i <= 9; i++) {				
-// 				gugu = gugu + '<tr>' + '<td>' 
-// 						+ inputGu +' * '+ i + ' = ' + '</td>' 
-// 						+ '<td>' + inputGu * i + '</td>'
-// 						+ '</tr>';							
-// 			}
+			var inputDanName = '';
 			
-			for (var i = 1; i <= 9; i++) {				
+			inputGu = 2;
+
+			gugu = '<tr style="text-align:center; font-weight:bold">' 
+				+ "<td colspan='2'>" + '2단' + '</td>' + '</tr>';			
+
+			for (var i = 1; i <= 9; i++) {			
 				gugu = gugu + '<tr>' + '<td>' 
 						+ inputGu +' * '+ i +'</td>' 
 						+ '<td>' + inputGu * i + '</td>'
 						+ '</tr>';							
-			}
-			
+			}			
 			divTableGugu = document.write("<div id ='chkDiv'>" 
-					+ '<table style="border:2px solid black";>' 
+					+ '<table style="border:2px solid black";>'					
 					+ gugu + '</table>' + '</div>');				
 			
 		</script>
