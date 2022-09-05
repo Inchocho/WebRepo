@@ -17,9 +17,12 @@
 			}
 			function clickBtn2() {
 				var myBtn2 = document.getElementById("btn2");
-				myBtn2.onclick = theFnc;
+				myBtn2.onclick = theFnc;	// level 1단계 이거 안씀(과거 코드사양됨)
 			}
 		
+// 			크롬
+// 			크로스 브라우징
+// 			level 2단계 addEventListener를 통해 작업함(현업)
 			if (window.addEventListener) { //1. 표준 브라우저일 경우 실행
 				window.addEventListener("load", clickBtn1, false);
 				window.addEventListener("load", clickBtn2, false);
