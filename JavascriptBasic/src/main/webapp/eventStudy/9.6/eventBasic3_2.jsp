@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Insert title here</title>
+		<title>2레벨addEventListener</title>
 		
 		<style type="text/css">
 		
@@ -14,23 +14,21 @@
 // 			표준 이벤트 등록방식(level 2 : 이벤트 대상.addEventListener)
 // 			이벤트 대상.addEventListener('이벤트명', 함수명, false);
 // 			이벤트명은 onclick 요런게 아님 이건 리스너명임 click이 이벤트임 
- 			
-// 			이벤트 대상.addEventListener('이벤트명', 함수명, false);		
-// 			세번째 인자값의 의미 (1:이벤트명, 2:함수명, 3:false <<< 이녀석)
-// 			이벤트 태그가 위, 아래로 나열될 때
-// 			해당 이벤트를 끝내고 다음 이벤트로 넘기는 역할을 한다
-// 			인자값 false가 포함되면 해당 이벤트가 발생한 위치에서 멈추고
-// 			아래로 진행되는데 이를 'bubbleUp(버블업)' 방식이라고 부른다.
-
+// 			이게 더 최근기술임 앞으로 onclick 요딴거 안쓰고 이벤트명을 적을것이다
 
 			function alertBtnFnc() {
 				alert('아 이게 표준 레벨이구만');
 			}
+			
+			function alertBtnFnc2() {
+				alert('아 이게 표준 레벨이구만 한 이벤트에 여러개 함수를 걸 수 있구나');
+			}			
 
 			window.onload = function(){			
 				var btn1Obj = document.getElementById('btn1');
 			
 				btn1Obj.addEventListener('click', alertBtnFnc);
+				btn1Obj.addEventListener('click', alertBtnFnc2);
 			}
 		</script>
 		
